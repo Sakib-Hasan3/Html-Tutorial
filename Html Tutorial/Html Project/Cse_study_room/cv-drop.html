@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="career-roadmap.html">Career Roadmap</a></li>
+                <li><a href="job-field.html">CSE Job Field</a></li>
+                <li><a href="cv-drop.html">Drop CV</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Drop Your CV</h1>
+            <p>Please upload your CV (in PDF, DOC, or DOCX format) and provide any additional information.</p>
+
+            <form action="submit_cv.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="cvFile">Upload Your CV</label>
+                    <input type="file" id="cvFile" name="cvFile" accept=".pdf, .doc, .docx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Information</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Add any extra details or notes here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit CV</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

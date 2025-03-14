@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="career-roadmap.html">Career Roadmap</a></li>
+                <li><a href="job-field.html">CSE Job Field</a></li>
+                <li><a href="cv-drop.html">Drop CV</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Community Questions & Answers</h1>
+            <p>Welcome to the community! Feel free to ask questions or provide answers to others' questions.</p>
+
+            <!-- Question Asking Form -->
+            <div class="question-form">
+                <h2>Ask a Question</h2>
+                <form action="submit_question.php" method="POST">
+                    <div class="form-group">
+                        <label for="questionTitle">Question Title</label>
+                        <input type="text" id="questionTitle" name="questionTitle" placeholder="Enter your question title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="questionDetails">Question Details</label>
+                        <textarea id="questionDetails" name="questionDetails" rows="4" placeholder="Describe your question in detail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Submit Question</button>
+                </form>
+            </div>
+
+            <hr>
+
+            <!-- Community Q&A Section -->
+            <h2>Community Board</h2>
+            <div class="community-board">
+                <!-- Example Question 1 -->
+                <div class="question">
+                    <h3>How to become a full-stack developer?</h3>
+                    <p class="question-details">I want to learn full-stack development, but I don't know where to start. What technologies should I focus on?</p>
+
+                    <!-- Answer Form -->
+                    <div class="answer-form">
+                        <h4>Provide an Answer</h4>
+                        <form action="submit_answer.php" method="POST">
+                            <input type="hidden" name="questionId" value="1">
+                            <textarea name="answer" rows="3" placeholder="Write your answer here..." required></textarea>
+                            <button type="submit" class="btn">Submit Answer</button>
+                        </form>
+                    </div>
+
+                    <div class="answers">
+                        <div class="answer">
+                            <p><strong>John Doe:</strong> To become a full-stack developer, start by learning HTML, CSS, and JavaScript for the front-end. Then, move on to back-end technologies like Node.js, Express, and databases like MongoDB or MySQL.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Question 2 -->
+                <div class="question">
+                    <h3>What programming language is best for machine learning?</h3>
+                    <p class="question-details">I am interested in machine learning and want to know the best programming language to start learning with.</p>
+
+                    <!-- Answer Form -->
+                    <div class="answer-form">
+                        <h4>Provide an Answer</h4>
+                        <form action="submit_answer.php" method="POST">
+                            <input type="hidden" name="questionId" value="2">
+                            <textarea name="answer" rows="3" placeholder="Write your answer here..." required></textarea>
+                            <button type="submit" class="btn">Submit Answer</button>
+                        </form>
+                    </div>
+
+                    <div class="answers">
+                        <div clas
+
+                        
