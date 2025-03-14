@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Study Group</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 0;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .group-details {
+            margin-bottom: 30px;
+        }
+
+        .group-details h2 {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .group-details p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Members List Styles */
+        .members-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .members-list li {
+            background-color: #f1f1f1;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .members-list li:hover {
+            background-color: #e2e2e2;
+        }
+
+        .members-list li .member-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .members-list li .member-role {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Chat Area */
+        .chat-box {
+            margin-top: 30px;
+        }
+
+        .chat-box h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .chat-area {
+            background-color: #f9f9f9;
+            padding: 20px;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow-y: scroll;
+        }
+
+        .chat-area .message {
+            margin-bottom: 15px;
+        }
+
+        .chat-input {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            width: 85%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .chat-input button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="career-roadmap.html">Career Roadmap</a></li>
+                <li><a href="job-field.html">CSE Job Field</a></li>
+                <li><a href="cv-drop.html">Drop CV</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <h1>Welcome to Study Group</h1>
+
+        <div class="group-details">
+            <h2>Group: Web Development</h2>
+            <p><strong>Instructor:</strong> John Doe</p>
+            <p><strong>Description:</strong> This group focuses on learning HTML, CSS, and JavaScript. We collaborate, share resources, and work together on projects to enhance our web development skills.</p>
+        </div>
+
+        <!-- Members List -->
+        <div class="members-list">
+            <h3>Group Members</h3>
+            <ul>
+                <li>
+                    <div>
+                        <span class="member-name">John Doe</span><br>
+                        <span class="member-role">Instructor</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="member-name">Jane Smith</span><br>
+                        <span class="member-role">Member</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="member-name">Samuel Lee</span><br>
+                        <span class="member-role">Member</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="member-name">Emily Clark</span><br>
+                        <span class="member-role">Member</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-box">
+            <h3>Group Chat</h3>
+            <div class="chat-area">
+                <div class="message">
+                    <strong>John Doe:</strong> Welcome to the Web Development group!
+                </div>
+                <div class="message">
+                    <strong>Jane Smith:</strong> Hi everyone, looking forward to learning together.
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message...">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

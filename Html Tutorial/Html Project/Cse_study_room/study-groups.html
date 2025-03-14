@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Groups & Collaboration</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 0;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .study-group-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .study-group-item {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .study-group-item h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .study-group-item p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .join-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .join-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .study-group-item {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="career-roadmap.html">Career Roadmap</a></li>
+                <li><a href="job-field.html">CSE Job Field</a></li>
+                <li><a href="cv-drop.html">Drop CV</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <header>
+            <h1>Study Groups & Collaboration</h1>
+            <p>Join study groups and collaborate with your peers to enhance your learning experience.</p>
+        </header>
+
+        <section>
+            <h2>Available Study Groups</h2>
+            <ul class="study-group-list">
+                <li class="study-group-item">
+                    <h3>Group 1: Web Development</h3>
+                    <p>Join a study group focused on mastering HTML, CSS, JavaScript, and front-end development skills.</p>
+                    <a href="join-group.html?group=web-development" class="join-btn">Join Group</a>
+                </li>
+                <li class="study-group-item">
+                    <h3>Group 2: Data Science & Machine Learning</h3>
+                    <p>Collaborate with peers to dive deep into data analysis, Python, and machine learning algorithms.</p>
+                    <a href="join-group.html?group=data-science" class="join-btn">Join Group</a>
+                </li>
+                <li class="study-group-item">
+                    <h3>Group 3: Algorithms & Data Structures</h3>
+                    <p>Improve your problem-solving skills by studying algorithms, data structures, and competitive programming challenges.</p>
+                    <a href="join-group.html?group=algorithms" class="join-btn">Join Group</a>
+                </li>
+                <li class="study-group-item">
+                    <h3>Group 4: Software Development</h3>
+                    <p>Work together to learn software engineering concepts and develop applications using various technologies.</p>
+                    <a href="join-group.html?group=software-development" class="join-btn">Join Group</a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Study Hub | <a href="#">Contact Us</a></p>
+        </footer>
+    </div>
+</body>
+</html>

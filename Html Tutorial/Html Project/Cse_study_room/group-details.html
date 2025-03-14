@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Group Details</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 0;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .group-info {
+            margin-bottom: 40px;
+        }
+
+        .group-info h2 {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .group-info p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .members-section {
+            margin-bottom: 40px;
+        }
+
+        .members-section h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .members-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .member-item {
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .member-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .chat-box {
+            margin-bottom: 40px;
+        }
+
+        .chat-box h3 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .chat-area {
+            background-color: #f9f9f9;
+            padding: 20px;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow-y: scroll;
+        }
+
+        .chat-area .message {
+            margin-bottom: 15px;
+        }
+
+        .chat-input {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            width: 85%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .chat-input button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="career-roadmap.html">Career Roadmap</a></li>
+                <li><a href="job-field.html">CSE Job Field</a></li>
+                <li><a href="cv-drop.html">Drop CV</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Group Info -->
+        <header>
+            <h1>Group: Web Development</h1>
+            <div class="group-info">
+                <h2>Course Topics</h2>
+                <p>Learn the fundamentals of web development, including HTML, CSS, JavaScript, and front-end frameworks.</p>
+                <p><strong>Instructor:</strong> John Doe</p>
+            </div>
+        </header>
+
+        <!-- Members List -->
+        <section class="members-section">
+            <h3>Members</h3>
+            <ul class="members-list">
+                <li class="member-item">
+                    <p>Md. Ariful Islam Masum</p>
+                    <span>Joined: 2 days ago</span>
+                </li>
+                <li class="member-item">
+                    <p>Mohammed Sakib Hasan</p>
+                    <span>Joined: 1 day ago</span>
+                </li>
+                <li class="member-item">
+                    <p>Shayak Das Tibra</p>
+                    <span>Joined: 5 hours ago</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Chat Box -->
+        <section class="chat-box">
+            <h3>Chat with Members</h3>
+            <div class="chat-area">
+                <div class="message"><strong>Instructor (John Doe):</strong> Welcome to the Web Development group! Let's get started with HTML basics.</div>
+                <div class="message"><strong>Md. Ariful Islam Masum:</strong> Looking forward to learning!</div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message..." />
+                <button>Send</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Study Hub | <a href="#">Contact Us</a></p>
+        </footer>
+    </div>
+</body>
+</html>
