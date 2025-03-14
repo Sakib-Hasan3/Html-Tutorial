@@ -3,50 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Academic Dashboard</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            display: block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content Area */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            min-height: 100vh;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Info Container */
+        .info-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box h3 {
+            font-size: 1.5em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .info-box .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .info-box .btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div>
+            <h2>Dashboard</h2>
             <ul>
-                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="academic-dashboard.html">Dashboard</a></li>
+                <li><a href="course-material.html">Course Materials</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="study-resources.html">Study Resources</a></li>
+                <li><a href="academic-calendar.html">Academic Calendar</a></li>
                 <li><a href="career-roadmap.html">Career Roadmap</a></li>
-                <li><a href="job-field.html">CSE Job Field</a></li>
                 <li><a href="cv-drop.html">Drop CV</a></li>
-                <li><a href="community.html">Community</a></li>
+                <li><a href="job-field.html">Job Field</a></li>
                 <li><a href="login.html">Logout</a></li>
             </ul>
         </div>
+        <div>
+            <p>&copy; 2025 Patuakhali University</p>
+        </div>
+    </div>
 
-        <div class="main-content">
-            <h1>Welcome to Your Dashboard!</h1>
-            <p>Explore various sections to help you in your career growth!</p>
+    <!-- Content Area -->
+    <div class="content">
+        <h1>Welcome to Your Academic Dashboard, <span id="usernameDisplay">Guest</span>!</h1>
+        <p>Manage your academic progress, explore career opportunities, and access important resources.</p>
 
+        <!-- Info Container -->
+        <div class="info-container">
             <div class="info-box">
-                <h3>Your Career Roadmap</h3>
-                <p>Start exploring the steps to grow in your career in Computer Science and Engineering.</p>
-                <a href="career-roadmap.html" class="btn">View Roadmap</a>
+                <h3>Your Courses</h3>
+                <p>Keep track of your current courses and explore materials.</p>
+                <a href="course-material.html" class="btn">View Courses</a>
             </div>
 
             <div class="info-box">
-                <h3>CSE Job Field</h3>
-                <p>Learn about the various job opportunities and career paths in the CSE field.</p>
-                <a href="job-field.html" class="btn">Explore Jobs</a>
+                <h3>Grades</h3>
+                <p>Check your academic performance and scores.</p>
+                <a href="grades.html" class="btn">View Grades</a>
             </div>
 
             <div class="info-box">
-                <h3>Drop Your CV</h3>
-                <p>Upload your CV and get noticed by recruiters.</p>
-                <a href="cv-drop.html" class="btn">Upload CV</a>
+                <h3>Tutorials & Articles</h3>
+                <p>Read in-depth tutorials and educational articles.</p>
+                <a href="tutorials.html" class="btn">View Tutorials</a>
             </div>
 
             <div class="info-box">
-                <h3>Community</h3>
-                <p>Join discussions, ask questions, and answer community queries.</p>
-                <a href="community.html" class="btn">Join Community</a>
+                <h3>Research Papers & Journals</h3>
+                <p>Access academic research and journals.</p>
+                <a href="research.html" class="btn">Explore Papers</a>
+            </div>
+
+            <div class="info-box">
+                <h3>Cheat Sheets & Quick References</h3>
+                <p>Get quick access to essential coding and theory references.</p>
+                <a href="cheatsheets.html" class="btn">View Cheat Sheets</a>
+            </div>
+
+            <div class="info-box">
+                <h3>Project Ideas & Case Studies</h3>
+                <p>Find inspiration for your next project.</p>
+                <a href="projects.html" class="btn">Explore Projects</a>
+            </div>
+
+            <div class="info-box">
+                <h3>Study Groups & Collaboration</h3>
+                <p>Join study groups and collaborate with peers.</p>
+                <a href="study-groups.html" class="btn">Join Groups</a>
+            </div>
+
+            <div class="info-box">
+                <h3>Tools & Software</h3>
+                <p>Access useful software and tools for CSE students.</p>
+                <a href="tools.html" class="btn">Explore Tools</a>
             </div>
         </div>
     </div>
+
+    <!-- JavaScript to Display Username -->
+    <script>
+        // Get username from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+
+        if (username) {
+            document.getElementById("usernameDisplay").textContent = username;
+        } else {
+            document.getElementById("usernameDisplay").textContent = "Guest";
+        }
+    </script>
+
 </body>
 </html>
