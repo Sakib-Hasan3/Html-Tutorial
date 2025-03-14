@@ -3,39 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login - CSE Study Room</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #007bff;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <!-- Welcome Message -->
-        <div class="welcome-message">
-            <h1>Welcome to CSE Study Room</h1>
-            <p>Login to access your study materials, career roadmap, and more!</p>
-        </div>
+        <h1>CSE Study Room</h1>
+        <p>Login to access your study materials, career roadmap, and more!</p>
 
-        <!-- Login Form -->
         <div class="login-form">
-            <h2>Login</h2>
-            <form action="dashboard.html" method="GET">
+            <!-- Login Form that submits to the dashboard -->
+            <form id="loginForm">
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <input type="text" id="username" name="username" required>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" name="password" required>
                 </div>
 
                 <button type="submit" class="btn">Login</button>
             </form>
-        </div>
 
-        <!-- Signup Link -->
-        <div class="signup-link">
-            <p>Don't you have an account? <a href="signup.html">Signup</a></p>
+            <div class="forgot-password">
+                <a href="#" id="forgotBtn">Forgot Password?</a>
+            </div>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent default form submission
+
+            // Get username input
+            let username = document.getElementById("username").value;
+            
+            // Redirect to dashboard.html with username in URL
+            window.location.href = "dashboard.html?username=" + encodeURIComponent(username);
+        });
+    </script>
+
 </body>
 </html>
