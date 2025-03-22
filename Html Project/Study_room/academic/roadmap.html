@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Roadmap - Master Your Skills</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #05056f;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Main Content Container */
+        .container {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #007bff;
+            font-size: 26px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .topic {
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+
+        .topic h3 {
+            color: #0056b3;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .topic p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .topic a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
+            transition: color 0.3s;
+        }
+
+        .topic a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                margin-bottom: 20px;
+            }
+
+            .header {
+                font-size: 28px;
+            }
+
+            .section h2 {
+                font-size: 22px;
+            }
+
+            .sidebar ul li a {
+                font-size: 16px;
+            }
+        }
+
+        /* Hover Animations */
+        .topic, .section {
+            transition: transform 0.3s ease;
+        }
+
+        .topic:hover, .section:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        CSE Roadmap - Master Your Skills
+    </div>
+
+    <div class="sidebar">
+        <h2>Welcome to CSE Study Room</h2>
+        <ul>
+            <li><a href="dashboard.html">📊 Dashboard</a></li> <!-- Dashboard Link -->
+            <li><a href="#">📚 Study Materials</a></li>
+            <li><a href="#">💬 Discussion Forum</a></li>
+            <li><a href="#">📝 Quizzes</a></li>
+            <li><a href="#">👤 Profile</a></li>
+            <li><a href="login.html">🚪 Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Programming Languages -->
+        <div class="section">
+            <h2>1. Programming Languages</h2>
+            <div class="topic">
+                <h3>Python</h3>
+                <p>Resource: <a href="https://docs.python.org" target="_blank">Python Official Documentation</a></p>
+                <p>Learning Platform: <a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Learn Python (Codecademy)</a></p>
+            </div>
+            <div class="topic">
+                <h3>C++</h3>
+                <p>Resource: <a href="https://www.geeksforgeeks.org/c-plus-plus/" target="_blank">Learn C++ (GeeksforGeeks)</a></p>
+                <p>Learning Platform: <a href="https://isocpp.org" target="_blank">C++ Programming Language (Official Docs)</a></p>
+            </div>
+            <div class="topic">
+                <h3>Java</h3>
+                <p>Resource: <a href="https://docs.oracle.com/javase/8/docs/" target="_blank">Java Programming (Official Docs)</a></p>
+                <p>Learning Platform: <a href="https://www.codecademy.com/learn/learn-java" target="_blank">Java (Codecademy)</a></p>
+            </div>
+        </div>
+
+        <!-- Data Structures & Algorithms -->
+        <div class="section">
+            <h2>2. Data Structures and Algorithms</h2>
+            <div class="topic">
+                <h3>Basic Data Structures</h3>
+                <p>Resource: <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank">GeeksforGeeks - Data Structures</a></p>
+                <p>Learning Platform: <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2011/" target="_blank">Introduction to Algorithms (MIT OpenCourseWare)</a></p>
+            </div>
+            <div class="topic">
+                <h3>Advanced Algorithms</h3>
+                <p>Resource: <a href="https://www.coursera.org/learn/algorithms-part1" target="_blank">Algorithms by Robert Sedgewick (Coursera)</a></p>
+                <p>Platform for Practice: <a href="https://leetcode.com" target="_blank">LeetCode</a></p>
+            </div>
+            <div class="topic">
+                <h3>Competitive Programming</h3>
+                <p>Platform: <a href="https://codeforces.com" target="_blank">Codeforces</a></p>
+                <p>Platform: <a href="https://www.hackerrank.com/domains/tutorials/10-days-of-javascript" target="_blank">HackerRank</a></p>
+            </div>
+        </div>
+
+        <!-- Operating Systems -->
+        <div class="section">
+            <h2>3. Operating Systems</h2>
+            <div class="topic">
+                <p>Resource: <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank">Operating Systems: Three Easy Pieces</a></p>
+                <p>Learning Platform: <a href="https://www.amazon.com/Operating-Systems-Concepts-Abraham-Silberschatz/dp/1118085616" target="_blank">Operating System Concepts (By Silberschatz)</a></p>
+                <p>Linux Command Line Basics: <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Codecademy</a></p>
+            </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="section">
+            <h2>4. Databases</h2>
+            <div class="topic">
+                <h3>SQL Basics</h3>
+                <p>Interactive Learning: <a href="https://mode.com/sql-tutorial/" target="_blank">SQL for Beginners (Mode Analytics)</a></p>
+                <p>Resource: <a href="https://sqlzoo.net" target="_blank">SQLZoo</a></p>
+            </div>
+            <div class="topic">
+                <h3>NoSQL (MongoDB)</h3>
+                <p>Platform: <a href="https://university.mongodb.com" target="_blank">MongoDB University</a></p>
+            </div>
+            <div class="topic">
+                <h3>Database Design and Theory</h3>
+                <p>Course: <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-830-database-systems-fall-2013/" target="_blank">MIT OCW - Database Systems</a></p>
+            </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="section">
+            <h2>5. Web Development</h2>
+            <div class="topic">
+                <h3>Front-End (HTML, CSS, JavaScript)</h3>
+                <p>Documentation & Tutorials: <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">MDN Web Docs (HTML, CSS, JS)</a></p>
+                <p>Interactive Learning: <a href="https://www.freecodecamp.org/learn" target="_blank">FreeCodeCamp Web Development</a></p>
+            </div>
+            <div class="topic">
+                <h3>Back-End Development</h3>
+                <p>Platform: <a href="https://nodejs.org/en/docs/" target="_blank">Node.js Official Docs</a></p>
+                <p>Framework: <a href="https://www.djangoproject.com" target="_blank">Django Documentation</a></p>
+            </div>
+            <div class="topic">
+                <h3>Full-Stack Development</h3>
+                <p>Learning Platform: <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a></p>
+            </div>
+        </div>
+
+        <!-- System Design -->
+        <div class="section">
+            <h2>6. System Design and Architecture</h2>
+            <div class="topic">
+                <p>Resource: <a href="https://github.com/donnemartin/system-design-primer" target="_blank">System Design Primer</a></p>
+                <p>Course: <a href="https://www.educative.io/courses/grokking-the-system-design-interview" target="_blank">Grokking the System Design Interview</a></p>
+                <p>Book: <a href="https://www.amazon.com/System-Design-Interviews-Second-Edition/dp/1479276583" target="_blank">System Design Interviews by Alex Xu</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
