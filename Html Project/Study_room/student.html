@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info - CSE Study Room</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f4f4f4;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        .sidebar ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        /* Form Styling */
+        .form-container {
+            background: white;
+            padding: 20px;
+            width: 50%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .form-container button:hover {
+            background: #0056b3;
+        }
+
+        /* Table Styling */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+            .main-content {
+                margin-left: 220px;
+                padding: 15px;
+            }
+            .form-container {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .sidebar {
+                width: 150px;
+                padding: 10px;
+            }
+            .main-content {
+                margin-left: 160px;
+                padding: 10px;
+            }
+            .form-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>CSE Study Room</h2>
+        <ul>
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+            <li><a href="#">📚 Study Materials</a></li>
+            <li><a href="#">💬 Discussion Forum</a></li>
+            <li><a href="#">📝 Quizzes</a></li>
+            <li><a href="#">👤 Profile</a></li>
+            <li><a href="login.html">🚪 Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Student Semester-Wise Information</h1>
+        <p>Enter your semester details below.</p>
+
+        <!-- Student Form -->
+        <div class="form-container">
+            <form method="post" action="save_student.php">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester" required>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+
+                <label for="subjects">Subjects:</label>
+                <input type="text" id="subjects" name="subjects" placeholder="Enter subjects (comma separated)" required>
+
+                <label for="grades">Grades:</label>
+                <input type="text" id="grades" name="grades" placeholder="Enter grades (comma separated)" required>
+
+                <button type="submit">Save Info</button>
+            </form>
+        </div>
+
+        <!-- Semester Data Table -->
+        <h2>Saved Semester Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Semester</th>
+                    <th>Subjects</th>
+                    <th>Grades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be displayed here after saving to database -->
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
