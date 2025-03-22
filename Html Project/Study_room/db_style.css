@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: aquamarine;
+    /*background-image: url( 'image/background.jpg');
+    */
+}
+
+/*sidebar navigation*/
+
+.sidebar {
+    width: 250px;
+    background: #007bff;
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.sidebar h2{
+    text-align : center;
+    margin-bottom :20px;
+
+} 
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(red, green, blue, alpha)
+}
+
+/*main content*/
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+
+}
+
+p {
+    color: #555;
+}
+
+/*button cards*/
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform o.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Animation Effects */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
