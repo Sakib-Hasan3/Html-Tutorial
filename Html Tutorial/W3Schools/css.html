@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Full Example</title>
+  
+  <!-- Simulated External CSS (normally this would be a separate styles.css file) -->
+  <style>
+    body {
+      background-color: powderblue;
+    }
+
+    h1.external {
+      color: blue;
+    }
+
+    p.external {
+      color: red;
+    }
+
+    h1.styled {
+      color: blue;
+      font-family: verdana;
+      font-size: 300%;
+    }
+
+    p.styled {
+      color: red;
+      font-family: courier;
+      font-size: 160%;
+    }
+
+    p.border {
+      border: 2px solid powderblue;
+    }
+
+    p.padding {
+      border: 2px solid powderblue;
+      padding: 30px;
+    }
+
+    p.margin {
+      border: 2px solid powderblue;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h1 style="color:blue;">1. This heading uses inline CSS (blue)</h1>
+  <p style="color:red;">This paragraph uses inline CSS (red)</p>
+
+  <hr>
+
+  <!-- Internal CSS (part of the <style> tag in <head>) -->
+  <h1 class="external">2. This heading uses internal CSS</h1>
+  <p class="external">This paragraph uses internal CSS</p>
+
+  <hr>
+
+  <!-- CSS Colors, Fonts, and Sizes -->
+  <h1 class="styled">3. Styled Heading</h1>
+  <p class="styled">Styled paragraph with different font and size</p>
+
+  <hr>
+
+  <!-- CSS Border -->
+  <p class="border">4. This paragraph has a border</p>
+
+  <!-- CSS Padding -->
+  <p class="padding">5. This paragraph has padding inside the border</p>
+
+  <!-- CSS Margin -->
+  <p class="margin">6. This paragraph has margin outside the border</p>
+
+</body>
+</html>
