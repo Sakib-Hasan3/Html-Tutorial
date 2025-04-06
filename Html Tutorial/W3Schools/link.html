@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Links Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      padding: 20px;
+    }
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Links Demonstration</h1>
+
+  <!-- 1. Basic text link -->
+  <h2>1. Basic Link</h2>
+  <p><a href="https://www.w3schools.com/">Visit W3Schools.com!</a></p>
+
+  <!-- 2. Link with target="_blank" -->
+  <h2>2. Open in New Tab</h2>
+  <p><a href="https://www.w3schools.com/" target="_blank">Open W3Schools in a new tab</a></p>
+
+  <!-- 3. Absolute and Relative URLs -->
+  <h2>3. Absolute vs. Relative URLs</h2>
+  <p><strong>Absolute URL:</strong> <a href="https://www.google.com/">Google</a></p>
+  <p><strong>Relative URL (same folder):</strong> <a href="page2.html">Page 2</a></p>
+  <p><strong>Relative URL (folder):</strong> <a href="/html/tutorial.html">HTML Tutorial</a></p>
+
+  <!-- 4. Image as a link -->
+  <h2>4. Image as a Link</h2>
+  <a href="https://www.w3schools.com/html/">
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools Logo" style="width:100px;">
+  </a>
+
+  <!-- 5. Email Link -->
+  <h2>5. Email Link</h2>
+  <p><a href="mailto:someone@example.com">Send us an email</a></p>
+
+  <!-- 6. Button as a Link -->
+  <h2>6. Button as a Link</h2>
+  <button onclick="document.location='https://www.w3schools.com/html/default.asp'">Go to HTML Tutorial</button>
+
+  <!-- 7. Link with a title -->
+  <h2>7. Link with Tooltip</h2>
+  <p>
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">
+      Visit our HTML Tutorial (hover to see tooltip)
+    </a>
+  </p>
+
+</body>
+</html>
