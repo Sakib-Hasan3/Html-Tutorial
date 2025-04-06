@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Link Colors</title>
+  <style>
+    /* Unvisited link */
+    a:link {
+      color: green;
+    }
+
+    /* Visited link */
+    a:visited {
+      color: gray;
+    }
+
+    /* Mouse over link */
+    a:hover {
+      color: orange;
+      text-decoration: none;
+    }
+
+    /* Selected link (when clicked) */
+    a:active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Links with Custom Colors</h1>
+
+  <p><a href="https://www.google.com">Go to Google (unvisited)</a></p>
+  <p><a href="https://www.w3schools.com">Go to W3Schools (hover and click)</a></p>
+  <p><a href="#visited-example">Visit internal link</a></p>
+
+  <h2 id="visited-example">This is the visited section</h2>
+  <p>Click the internal link above to test the visited color change.</p>
+
+</body>
+</html>
