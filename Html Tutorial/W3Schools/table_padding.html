@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Table Padding & Spacing</title>
+  <style>
+    table {
+      border-collapse: separate; /* default: allows spacing between cells */
+      border-spacing: 15px;       /* spacing between cells (cell spacing) */
+      width: 70%;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid #444;
+      padding: 20px;              /* space inside each cell (cell padding) */
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Table with Padding and Spacing</h2>
+
+  <table>
+    <tr>
+      <th>Student</th>
+      <th>Subject</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <td>Masum</td>
+      <td>Math</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>Sakib</td>
+      <td>Physics</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Tibra</td>
+      <td>Chemistry</td>
+      <td>91</td>
+    </tr>
+  </table>
+
+</body>
+</html>
