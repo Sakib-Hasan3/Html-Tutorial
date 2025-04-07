@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Table Size Example</title>
+  <style>
+    /* Style the whole table */
+    table {
+      width: 70%; /* Table takes up 70% of the page width */
+      height: 200px; /* Total height of the table */
+      border-collapse: collapse; /* Removes double borders between cells */
+      margin: 20px auto; /* Center the table horizontally */
+    }
+
+    /* Style all table cells and headers */
+    th, td {
+      border: 1px solid #000; /* Black border around cells */
+      padding: 10px; /* Padding inside cells */
+      text-align: center; /* Center text in cells */
+    }
+
+    /* Style specific column widths */
+    th.name-col, td.name-col {
+      width: 40%; /* Name column takes 40% of the table */
+    }
+
+    th.dept-col, td.dept-col {
+      width: 30%; /* Department column takes 30% */
+    }
+
+    th.age-col, td.age-col {
+      width: 30%; /* Age column takes 30% */
+    }
+
+    /* Optional: Highlight header row */
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Student Information Table with Sizes</h2>
+
+  <table>
+    <!-- Table Header -->
+    <tr>
+      <th class="name-col">Name</th>
+      <th class="dept-col">Department</th>
+      <th class="age-col">Age</th>
+    </tr>
+
+    <!-- Table Rows -->
+    <tr>
+      <td class="name-col">Masum</td>
+      <td class="dept-col">CSE</td>
+      <td class="age-col">21</td>
+    </tr>
+    <tr>
+      <td class="name-col">Sakib</td>
+      <td class="dept-col">EEE</td>
+      <td class="age-col">22</td>
+    </tr>
+    <tr>
+      <td class="name-col">Tibra</td>
+      <td class="dept-col">CE</td>
+      <td class="age-col">20</td>
+    </tr>
+  </table>
+
+</body>
+</html>
+
